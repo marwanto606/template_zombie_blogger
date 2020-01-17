@@ -156,6 +156,9 @@ line-height: 1.54;
 border: 0px;
 }
 
+.post img{max-width:100%;height:auto;}
+.separator a{margin-left:0px !important;}
+img {max-width:100%;height:auto;border:0;}
 @media screen and (max-width:1150px){
 #teaser2,#teaser3{display: none;}
 }
@@ -844,7 +847,6 @@ border: 0px;
       if (items && items.length > 0) {
         cursor = parseInt(items[items.length - 1].timestamp) + 1;
       }
-
       var bodyFromEntry = function(entry) {
         if (entry.gd$extendedProperty) {
           for (var k in entry.gd$extendedProperty) {
@@ -855,7 +857,6 @@ border: 0px;
         }
         return entry.content.$t;
       }
-
       var parse = function(data) {
         cursor = null;
         var comments = [];
@@ -903,7 +904,6 @@ border: 0px;
         }
         return comments;
       };
-
       var paginator = function(callback) {
         if (hasMore()) {
           var url = config.feed + '?alt=json&v=2&orderby=published&reverse=false&max-results=50';
@@ -941,11 +941,9 @@ border: 0px;
         }
         return '';
       };
-
       var replybox = null;
       var replyUrlParts = null;
       var replyParent = undefined;
-
       var onReply = function(commentId, domId) {
         if (replybox == null) {
           // lazily cache replybox, and adjust to suit this style:
@@ -965,7 +963,6 @@ border: 0px;
           replyParent = commentId;
         }
       };
-
       var hash = (window.location.hash || '#').substring(1);
       var startThread, targetComment;
       if (/^comment-form_/.test(hash)) {
@@ -973,7 +970,6 @@ border: 0px;
       } else if (/^c[0-9]+$/.test(hash)) {
         targetComment = hash.substring(1);
       }
-
       // Configure commenting API:
       var configJso = {
         'maxDepth': config.maxThreadDepth
@@ -991,14 +987,12 @@ border: 0px;
         'config': configJso,
         'messages': msgs
       };
-
       var render = function() {
         if (window.goog && window.goog.comments) {
           var holder = document.getElementById('comment-holder');
           window.goog.comments.render(holder, provider);
         }
       };
-
       // render now, or queue to render when library loads:
       if (window.goog && window.goog.comments) {
         render();
