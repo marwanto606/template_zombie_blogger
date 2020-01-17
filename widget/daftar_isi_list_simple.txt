@@ -1,0 +1,8 @@
+widget list link
+Demo : https://daftarisi606.blogspot.com
+Copykan script di bawah ini dan masukkan kedalam wiget HTML atau bisa juga dengan memasukkan nya kedalam post mode HTML akan tampil langsung di halaman index.
+ganti url blog www.marwanto606.com dengan blog utama kalian
+
+<div style="overflow: auto; width: 100%;">
+<script src="https://cdn.rawgit.com/marwanto606/483b4aa1a417cd735199bdeba11fee55/raw/00459ead520f81c52cdb3e51c88bc9afa96409a9/daftarisi.js"></script>
+<script src="https://www.marwanto606.com/feeds/posts/default?max-results=9999&amp;alt=json-in-script&amp;callback=loadtoc"></script> </div>
