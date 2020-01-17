@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<HTML lang='id'>
+&lt;!--<head>--&gt;&lt;head&gt;
+<meta content='#0dbdeb' name='theme-color'/>
+<!-- SEO Title Tag -->
+<b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.homepageUrl == data:blog.url'>
+<title><data:blog.pageTitle/> - <data:blog.metaDescription/></title>
+</b:if>
+<b:if cond='data:blog.pageType in {&quot;item&quot;,&quot;static_page&quot;}'>
+<title><data:blog.pageName/> - <data:blog.title/></title>
+</b:if>
+<b:if cond='data:blog.pageType in {&quot;error_page&quot;}'>
+<title>Page Not Found - <data:blog.title/></title>
+</b:if>
+<b:if cond='data:blog.searchQuery'>
+<title>Hasil pencarian &quot;<data:blog.searchQuery/>&quot; - <data:blog.title/></title>
+</b:if>
+<b:if cond='data:blog.pageType == &quot;index&quot;'><b:if cond='data:blog.url != data:blog.homepageUrl'><title><data:blog.pageTitle/> - All Post</title></b:if></b:if>
+<b:if cond='data:blog.pageType == &quot;archive&quot;'><title><data:blog.title/> - <data:blog.pageName/></title></b:if>
+<!-- Meta keywords otomatis halaman depan, statis, dan postingan -->
+<b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.homepageUrl == data:blog.url'>
+<meta expr:content='data:blog.title' name='keywords'/>
+<meta expr:content='data:blog.title + &quot; - &quot; + data:blog.metaDescription' name='description'/>
+</b:if>
+<b:if cond='data:blog.pageType in {&quot;item&quot;,&quot;static_page&quot;}'>
+<meta expr:content='data:blog.pageName' name='keywords'/>
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.title + &quot; - &quot; + data:blog.metaDescription' name='description'/>
+</b:if>
+</b:if>
+<b:if cond='data:blog.pageType in {&quot;archive&quot;} or data:blog.searchLabel or data:blog.searchQuery'>
+<meta content='noindex,nofollow' name='robots'/>
+</b:if>
+<b:if cond='data:blog.isMobile'><meta content='noindex,nofollow' name='robots'/></b:if>
+<!-- Facebook Open Graph Tag -->
+<b:if cond='data:blog.pageType == &quot;item&quot;'>
+<b:if cond='data:blog.url'>
+<meta expr:content='data:blog.url' property='og:url'/>
+</b:if>
+<meta expr:content='data:blog.title' property='og:site_name'/>
+<meta expr:content='data:blog.pageName' property='og:title'/>
+<meta content='article' property='og:type'/>
+<b:else/>
+<meta expr:content='data:blog.pageTitle' property='og:title'/>
+<meta content='website' property='og:type'/>
+<b:if cond='data:blog.postImageThumbnailUrl'>
+<meta expr:content='data:blog.postImageThumbnailUrl' property='og:image'/>
+<b:else/>
+<meta content='https://1.bp.blogspot.com/-ZFK-nRCTuso/W08IcRacxgI/AAAAAAAAAhc/Lx0HMra3OPs7eOwnXTkvPJLNU94SaN76ACLcBGAs/s1600/favicon.png' property='og:image'/>
+</b:if>
+</b:if>
+<b:if cond='data:blog.metaDescription'>
+<meta expr:content='data:blog.metaDescription' property='og:description'/>
+</b:if>
+
+    <meta content='blogger' name='generator'/>
+    <meta content='Global' name='Distribution'/>
+    <meta content='1 days' name='revisit-after'/>
+    <meta content='all-language' http-equiv='Content-Language'/>
+    <meta content='indonesian' name='language'/>
+    <meta content='global' name='target'/>
+    <meta content='id' name='geo.country'/>
+    <meta content='Indonesia' name='geo.placename'/>
+    <meta content='General' name='Rating'/>
+    <meta content='index,follow' name='Robots'/>
+    <meta content='Marwanto' name='author'/>
+    <meta content='Marwanto606' name='copyright'/>
+    <meta content='1 days' name='revisit-after'/>
+    <meta content='Blog Tempat Berbagi Ilmu Seputar Tutorial Blogger, Download Template, Sofware Freeware Update, Game Terbaru, Service Reset Printer, Menambang Bitcoin, dan Tips And Trick' name='keywords'/>
+    <meta content='index,follow,snipet' name='googlebot'/>
+    <meta content='Aeiwi, Alexa, AllTheWeb, AltaVista, AOL Netfind, Anzwers, Canada, DirectHit, EuroSeek, Excite, Overture, Go, Google, HotBot. InfoMak, Kanoodle, Lycos, MasterSite, National Directory, Northern Light, SearchIt, SimpleSearch, WebsMostLinked, WebTop, What-U-Seek, AOL, Yahoo, WebCrawler, Infoseek, Excite, Magellan, LookSmart, CNET, Googlebot' name='search engines'/>
+
+<meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
+&lt;style&gt;&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
+<style>
+---------------------------------------------------------
+Name Template : Daftar isi single widget HTML
+Designer	  	: Marwanto
+Designer URL	: https://www.marwanto606.com
+Github		  	: https://github.com/marwanto606/template_zombie_blogger
+
+HARGAI PEMBUAT TEMPELATE BLOGGER INI DENGAN TIDAK MENGHAPUS LINK CREDIT DI FOOTER, OK COK !!!
+--------------------------------------------------------- */
+
+*{outline: none;}
+
+body { 
+ background:#000000 url(http://2.bp.blogspot.com/-Cbz-Y1ezxB0/USDif0nOx4I/AAAAAAAAIcw/xpk2AZufA_U/s1600/bg.png)  repeat fixed top center fixed;
+ margin:0px;
+ font-size:11px;
+ color: #e2e2e2; 
+ font-family: &quot;Lucida sans unicode&quot;, &quot;Lucida sans&quot;, sans-serif;
+ }
+
+#outer-wrapper { max-width:768px;width:100%;background-color:$(content.background.color);margin:10px auto ;padding:10px;text-align:$startSide;font:$(main.body.font);-moz-box-shadow:0 0 15px rgba(0,0,0,0.31);-webkit-box-shadow:0 0 15px rgba(0,0,0,0.31);box-shadow:0 0 15px rgba(0,0,0,0.31);}
+a {text-decoration:none;}
+a:link {
+ color:#9FC54E;
+ text-decoration:none;
+ }
+a:select {
+ color:$linkcolor;
+ text-decoration:none;
+ }
+a:visited {
+ color:#9FC54E;
+ text-decoration:none;
+ }
+a:hover { 
+ color: #FF850A;
+ text-decoration:none;
+ }
+a img {border-width:0;background-position: center; margin-left: auto; margin-right: auto;}
+.post img{max-width:100%;height:auto;}
+.separator a{margin-left:0px !important;}
+img {max-width:100%;height:auto;border:0;}
+#navbar-iframe, .feed-links, .jump-link {display:none}
+h1 {font-size:24px;}
+h2 {font-size:14px;}
+h3 {font-size:18px;}
+h3 .post-title {background-image: none;}
+h3 .entry-title {background-image: none;}
+h4 {font-size:12px;}
+h5 {font-size:10px;}
+h6 {font-size:8px;}
+hr {background-color:$bordercolor;border:0;height:1px;margin-bottom:2px;clear:both;}
+
+/*Header*/
+
+#header-wrapper {
+ width: 100%; 
+ }
+
+#header {
+ color: #01B8C0;
+ text-align: center;
+ }
+
+#header h1 {
+ font-size: 30px;
+ text-transform:uppercase;
+ font-weight: bold;
+ letter-spacing: -.05em;
+ line-height: 1.2;
+ color: #01B8C0;
+ font-family: &quot;Myriad Pro&quot;, Myriad, Geneva, Calibri, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+ }
+
+#header a {
+ color: #01B8C0;
+ text-decoration:none;
+ }
+
+#header a:hover {
+ color: #f73d27; 
+ text-decoration:none;
+ }
+
+#header .description {
+ margin:0 0 0 2px;
+ padding-left:10px;
+ width:100%;
+ text-decoration:none;
+ font-family: &quot;Myriad Pro&quot;, Myriad, Geneva, Calibri, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif;
+ font-size:11px;
+ color: #01B8C0;
+ text-transform:uppercase;
+ }
+
+#header img {
+ margin-$startSide: auto;
+ margin-$endSide: auto;
+ }
+
+#main-wrapper {
+ padding:10px;
+ float:left;
+ width: 100%;
+ margin:5px auto;
+ display: inline;
+ }
+
+/*Footer*/
+#footer-wrapper {
+ text-align: center;
+ width: 100%;
+ height: 17px;
+ margin: 10 auto;
+ font-size:12px;
+ color: #333;
+ font-family: &quot;Myriad Pro&quot;, Myriad, Geneva, Calibri, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; 
+ }
+#footer-wrapper a, #footer-wrapper a:visited{
+ text-decoration:none;
+ color: #01B8C0; /* 9FC54E */
+ }
+
+#footer-wrapper a:hover{
+ text-decoration:none;
+ color: #e2e2e2;
+ }
+
+/* RESPONSIVE */
+@media only screen and (max-width:1024px){
+  #outer-wrapper{width:100%;height:100%;}
+#header img {width:100%;height: auto;}
+}
+@media only screen and (max-width:768px){
+  #outer-wrapper{width:90%;}
+}
+@media only screen and (max-width:240px){
+  #outer-wrapper{padding: 0px;}
+#style{padding: 0px;}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar{width:10px;background:#FFF}
+::-webkit-scrollbar-thumb{background-color:#01B8C0;border-radius:10px}
+</style>
+
+
+
+&lt;!--</head>--&gt;
+&lt;/head&gt;
+&lt;!--<body>--&gt;&lt;body&gt;
+  <div id='outer-wrapper'>
+
+    <div id='header-wrapper'>
+<div id='header'>
+      <b:section class='header' id='header' maxwidgets='1' showaddelement='no'>
+        <b:widget id='Header1' locked='true' title='Ace-F (Header)' type='Header' version='1'>
+          <b:widget-settings>
+            <b:widget-setting name='displayUrl'>http://1.bp.blogspot.com/-BBpVCH8cdKo/VHb2zYRw15I/AAAAAAAAA40/TQzwkUQT-SI/s1600/marwanto606.png</b:widget-setting>
+            <b:widget-setting name='displayHeight'>120</b:widget-setting>
+            <b:widget-setting name='sectionWidth'>740</b:widget-setting>
+            <b:widget-setting name='useImage'>true</b:widget-setting>
+            <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+            <b:widget-setting name='imagePlacement'>REPLACE</b:widget-setting>
+            <b:widget-setting name='displayWidth'>505</b:widget-setting>
+          </b:widget-settings>
+          <b:includable id='main'>
+
+  <b:if cond='data:useImage'>
+    <b:if cond='data:imagePlacement == &quot;BEHIND&quot;'>
+      <!--
+      Show image as background to text. You can't really calculate the width
+      reliably in JS because margins are not taken into account by any of
+      clientWidth, offsetWidth or scrollWidth, so we don't force a minimum
+      width if the user is using shrink to fit.
+      This results in a margin-width's worth of pixels being cropped. If the
+      user is not using shrink to fit then we expand the header.
+      -->
+      <div expr:style='&quot;background-image: url(\&quot;&quot; + data:sourceUrl + &quot;\&quot;); &quot;                      + &quot;background-position: &quot;                      + data:backgroundPositionStyleStr + &quot;; &quot;                      + data:widthStyleStr                      + &quot;min-height: &quot; + data:height + &quot;px;&quot;                      + &quot;_height: &quot; + data:height + &quot;px;&quot;                      + &quot;background-repeat: no-repeat; &quot;' id='header-inner'>
+        <div class='titlewrapper' style='background: transparent'>
+          <h1 class='title' style='background: transparent; border-width: 0px'>
+            <b:include name='title'/>
+          </h1>
+        </div>
+        <b:include name='description'/>
+      </div>
+    <b:else/>
+      <!--Show the image only-->
+      <div id='header-inner'>
+        <a href='https://www.marwanto606.com' style='display: block'>
+          <img alt='marwanto606e' expr:height='data:height' expr:id='data:widget.instanceId + &quot;_headerimg&quot;' expr:src='data:sourceUrl' expr:width='data:width' style='display: block'/>
+        </a>
+        <!--Show the description-->
+        <b:if cond='data:imagePlacement == &quot;BEFORE_DESCRIPTION&quot;'>
+          <b:include name='description'/>
+        </b:if>
+      </div>
+    </b:if>
+  <b:else/>
+    <!--No header image -->
+    <div id='header-inner'>
+      <div class='titlewrapper'>
+        <h1 class='title'>
+          <b:include name='title'/>
+        </h1>
+      </div>
+      <b:include name='description'/>
+    </div>
+  </b:if>
+</b:includable>
+          <b:includable id='description'>
+  <div class='descriptionwrapper'>
+    <p class='description'><span><data:description/></span></p>
+  </div>
+</b:includable>
+          <b:includable id='title'>
+  <b:tag cond='data:blog.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+    <data:title/>
+  </b:tag>
+</b:includable>
+        </b:widget>
+      </b:section>
+    </div>
+      </div>
+
+<div id='search-wrapper'>
+<div id='search'>
+
+</div>
+</div>
+
+    <div id='content-wrapper'>
+
+      <div id='crosscol-wrapper' style='text-align:center'>
+        <b:section class='crosscol' id='crosscol'>
+          <b:widget id='HTML3' locked='false' title='' type='HTML' version='1'>
+            <b:widget-settings>
+              <b:widget-setting name='content'>&lt;div style=&quot;border: 0px; height: 400px; overflow: auto; padding: 10px 10px 10px 0; width: 100%;&quot;&gt;
+&lt;style scoped=&quot;scoped&quot; type=&quot;text/css&quot;&gt;
+/* Skin for Blogger Tabbed Layout TOC */
+#tabbed-toc{margin:0 auto;background-color:#01B8C0;-webkit-box-shadow:0 1px 3px rgba(0,0,0,.4);-moz-box-shadow:0 1px 3px rgba(0,0,0,.4);box-shadow:0 1px 3px rgba(0,0,0,.4);overflow:hidden;position:relative;color:#333}
+#tabbed-toc .loading{display:block;padding:5px 10px;font:normal bold 10px/normal Helmet,Freesans,Sans-Serif;color:white}
+#tabbed-toc ul,#tabbed-toc ol,#tabbed-toc li{margin:0 0;padding:0 0;list-style:none}
+#tabbed-toc .toc-tabs{width:20%;float:left}
+#tabbed-toc .toc-tabs li a{display:block;font:normal bold 10px/28px Helmet,Freesans,Sans-Serif;height:28px;overflow:hidden;text-overflow:ellipsis;color:#ccc;text-transform:uppercase;text-decoration:none;padding:0 12px;cursor:pointer}
+#tabbed-toc .toc-tabs li a:hover{background-color:#000000;color:white}
+#tabbed-toc .toc-tabs li a.active-tab{background-color:#117B80;color:white;-webkit-box-shadow:-2px 2px 2px rgba(0,0,0,.5);-moz-box-shadow:-2px 2px 2px rgba(0,0,0,.5);box-shadow:-2px 2px 2px rgba(0,0,0,.5);position:relative;z-index:5;margin:0 -1px 0 0;/* cursor:text;*/}
+#tabbed-toc .toc-content,#tabbed-toc .divider-layer{width:80%;float:right;background-color:white;border-left:5px solid #117B80;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+#tabbed-toc .divider-layer{float:none;display:block;position:absolute;top:0;right:0;bottom:0;-webkit-box-shadow:0 0 7px rgba(0,0,0,.7);-moz-box-shadow:0 0 7px rgba(0,0,0,.7);}
+#tabbed-toc .panel{position:relative;z-index:5;font:normal normal 10px/normal Helmet,Freesans,Sans-Serif}
+#tabbed-toc .panel li a{display:block;position:relative;font-weight:bold;font-size:11px;color:#01B8C0;line-height:20px;height:20px;padding:0 12px;text-decoration:none;outline:none;overflow:hidden}
+#tabbed-toc .panel li time{display:block;font-style:italic;font-weight:normal;font-size:10px;color:#666;float:right}
+#tabbed-toc .panel li .summary{display:block;padding:10px 12px 10px;font-style:italic;border-bottom:4px solid #117B80;overflow:hidden}
+#tabbed-toc .panel li .summary img.thumbnail{float:left;display:block;margin:0 8px 0 0;padding:4px 4px;width:72px;height:72px;border:1px solid #dcdcdc;background-color:#fafafa}
+#tabbed-toc .panel li:nth-child(even){background-color:#ffffff}
+#tabbed-toc .panel li a:hover,#tabbed-toc .panel li a:focus,#tabbed-toc .panel li a:hover time,#tabbed-toc .panel li.bold a{background-color:#333;color:white;outline:none}
+#tabbed-toc .panel li.bold a:hover,#tabbed-toc .panel li.bold a:hover time{background-color:#222}
+@media (max-width:700px){#tabbed-toc{border:2px solid #333}#tabbed-toc .toc-tabs,#tabbed-toc .toc-content{overflow:hidden;width:auto;float:none;display:block}#tabbed-toc .toc-tabs li{display:inline;float:left}#tabbed-toc .toc-tabs li a,#tabbed-toc .toc-tabs li a.active-tab{background-color:#01B8C0;-webkit-box-shadow:2px 0 7px rgba(0,0,0,.4);-moz-box-shadow:2px 0 7px rgba(0,0,0,.4);box-shadow:2px 0 7px rgba(0,0,0,.4)}#tabbed-toc .toc-tabs li a.active-tab{background-color:white;color:#333}#tabbed-toc .toc-content{border:none}#tabbed-toc .divider-layer,#tabbed-toc .panel li time{display:none}}
+&lt;/style&gt;
+
+&lt;div id=&quot;tabbed-toc&quot;&gt;
+&lt;span class=&quot;loading&quot;&gt;Memuat...&lt;/span&gt;&lt;/div&gt;
+&lt;script&gt;
+var tabbedTOC = {
+    blogUrl: &quot;https://www.marwanto606.com&quot;, // Blog URL
+    containerId: &quot;tabbed-toc&quot;, // Container ID
+    activeTab: 1, // The default active tab index (default: the first tab)
+    showDates: false, // `true` to show the post date
+    showSummaries: false, // `true` to show the posts summaries
+    numChars: 200, // Number of summary chars
+    showThumbnails: false, // `true` to show the posts thumbnails (Not recommended)
+    thumbSize: 40, // Thumbnail size
+    noThumb: &quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAA3NCSVQICAjb4U/gAAAADElEQVQImWOor68HAAL+AX7vOF2TAAAAAElFTkSuQmCC&quot;, // A &quot;no thumbnail&quot; URL
+    monthNames: [ // Array of month names
+        &quot;Januari&quot;,
+        &quot;Februari&quot;,
+        &quot;Maret&quot;,
+        &quot;April&quot;,
+        &quot;Mei&quot;,
+        &quot;Juni&quot;,
+        &quot;Juli&quot;,
+        &quot;Agustus&quot;,
+        &quot;September&quot;,
+        &quot;Oktober&quot;,
+        &quot;November&quot;,
+        &quot;Desember&quot;
+    ],
+    newTabLink: true, // Open link in new window?
+    maxResults: 99999, // Maximum post results
+    preload: 0, // Load the feed after 0 seconds (option =&gt; time in milliseconds || &quot;onload&quot;)
+    sortAlphabetically: true, // `false` to sort posts by published date
+    showNew: 7, // `false` to hide the &quot;New!&quot; mark in most recent posts, or define how many recent posts are to be marked
+    newText: &quot; - &lt;em style=&#39;color:red;&#39;&gt;New!&lt;/em&gt;&quot; // HTML for the &quot;New!&quot; text
+};
+&lt;/script&gt;
+&lt;script src=&quot;https://sites.google.com/site/marwanto606/home/tabbed-toc.js&quot;&gt;&lt;/script&gt;&lt;/div&gt;</b:widget-setting>
+            </b:widget-settings>
+            <b:includable id='main'>
+  <!-- only display title if it's non-empty -->
+  <b:if cond='data:title != &quot;&quot;'>
+    <h2 class='title'><data:title/></h2>
+  </b:if>
+  <div class='widget-content'>
+    <data:content/>
+  </div>
+
+</b:includable>
+          </b:widget>
+        </b:section>
+      </div>
+
+
+
+    </div> <!-- end content-wrapper -->
+
+    <div id='footer-wrapper'>Copyright &#169; <script>var y = new Date();document.write(y.getFullYear());</script> | Design by <a href='https://www.marwanto606.com' target='_blank' title='Marwanto606'>Marwanto606.COM</a>
+    </div> 
+  </div> <!-- end outer-wrapper -->
+
+&lt;!--</body>--&gt;&lt;/body&gt;
+</HTML>
