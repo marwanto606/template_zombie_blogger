@@ -1144,7 +1144,8 @@ hr {background-color:#fff;border:0;height:1px;margin-bottom:2px;clear:both;}
     </div>
 
 
-<div id='footer-wrapper'>Copyright &#169; <script>var y = new Date();document.write(y.getFullYear());</script> | Design by <a href='https://www.marwanto606.com' target='_blank' title='Marwanto606'>Marwanto606.com</a>
+<div id='footer-wrapper'>
+<span class='credit-link'>Copyright &#169; <script>var y = new Date();document.write(y.getFullYear());</script> | Design by <a href='https://www.marwanto606.com' id='credit' rel='dofollow' target='_blank' title='Marwanto606'>Marwanto606.COM</a> </span>
     </div>
   </div>
 <script>
