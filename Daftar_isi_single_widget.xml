@@ -210,7 +210,7 @@ hr {background-color:$bordercolor;border:0;height:1px;margin-bottom:2px;clear:bo
 
 &lt;!--</head>--&gt;
 &lt;/head&gt;
-&lt;!--<body>--&gt;&lt;body&gt;
+&lt;!--<body>--&gt;&lt;body oncontextmenu=&#39;return false;&#39; ondragstart=&#39;return false&#39; onmousedown=&#39;return false;&#39; onselectstart=&#39;return false&#39; style=&#39;-moz-user-select: none; cursor: default;&#39;&gt;
   <div id='outer-wrapper'>
 
     <div id='header-wrapper'>
