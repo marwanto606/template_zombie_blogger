@@ -12,29 +12,20 @@
 <link expr:href='data:blog.url' rel='canonical'/>
 <meta content='#0dbdeb' name='theme-color'/>
 <!-- SEO Title Tag -->
-<b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.homepageUrl == data:blog.url'>
-<title><data:blog.pageTitle/> - <data:blog.metaDescription/></title>
-</b:if>
-<b:if cond='data:blog.pageType in {&quot;item&quot;,&quot;static_page&quot;}'>
-<title><data:blog.pageName/> - <data:blog.title/></title>
-</b:if>
-<b:if cond='data:blog.pageType in {&quot;error_page&quot;}'>
-<title>Page Not Found - <data:blog.title/></title>
-</b:if>
-<b:if cond='data:blog.searchQuery'>
-<title>Hasil pencarian &quot;<data:blog.searchQuery/>&quot; - <data:blog.title/></title>
-</b:if>
-<b:if cond='data:blog.pageType == &quot;index&quot;'><b:if cond='data:blog.url != data:blog.homepageUrl'><title><data:blog.pageTitle/> - All Post</title></b:if></b:if>
-<b:if cond='data:blog.pageType == &quot;archive&quot;'><title><data:blog.title/> - <data:blog.pageName/></title></b:if>
-<!-- Meta keywords otomatis halaman depan, statis, dan postingan -->
-<b:if cond='data:blog.pageType in {&quot;index&quot;} and data:blog.homepageUrl == data:blog.url'>
-<meta expr:content='data:blog.title' name='keywords'/>
-</b:if>
-<b:if cond='data:blog.pageType in {&quot;item&quot;,&quot;static_page&quot;}'>
-<meta expr:content='data:blog.pageName' name='keywords'/>
-</b:if>
-<b:if cond='data:blog.pageType in {&quot;archive&quot;} or data:blog.searchLabel or data:blog.searchQuery'>
-<meta content='noindex,nofollow' name='robots'/>
+<b:if cond='data:view.isSingleItem'>
+<title><data:blog.pageName/></title>
+<b:elseif cond='data:view.isHomepage'/>
+<title><data:blog.title/></title>
+<b:elseif cond='data:view.search.label'/>
+<title><data:blog.pageTitle/></title>
+<b:elseif cond='data:view.search.query'/>
+<title><data:view.search.resultsMessage/></title>
+<b:elseif cond='data:view.search and !data:view.search.label and !data:view.search.query'/>
+<title><data:blog.pageTitle/></title>
+<b:elseif cond='data:view.isArchive'/>
+<title><data:view.archive.rangeMessage/></title>
+<b:elseif cond='data:view.isError'/>
+<title>404 Not Found</title>
 </b:if>
 <b:if cond='data:blog.isMobile'><meta content='noindex,nofollow' name='robots'/></b:if>
 <!-- Facebook Open Graph Tag -->
