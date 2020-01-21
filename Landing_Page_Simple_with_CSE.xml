@@ -49,14 +49,6 @@
 <meta expr:content='data:blog.metaDescription' property='og:description'/>
 </b:if>
 <meta expr:content='data:blog.title' property='og:site_name'/>
-<meta content='1804789006468790' property='fb:app_id'/>
-<meta content='100000728531418' property='fb:admins'/>
-<meta content='106660612706164' property='fb:pages'/>
-<meta content='https://www.facebook.com/106660612706164' property='article:author'/>
-<meta content='https://www.facebook.com/106660612706164' property='article:publisher'/>
-<meta content='summary_large_image' name='twitter:card'/>
-<meta content='@marwanto606' name='twitter:site'/>
-<meta content='@marwanto606' name='twitter:creator'/>
 &lt;style&gt;&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
 <style>
 /*
