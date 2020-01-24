@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <HTML lang='id'>
 &lt;!--<head>--&gt;&lt;head&gt;
+<b:if cond='data:blog.pageType == &quot;error_page&quot;'>
+<script>window.location.href = &quot;/&quot;;</script>
+</b:if>
 <meta content='#0dbdeb' name='theme-color'/>
 <!-- SEO Title Tag -->
 <b:if cond='data:view.isSingleItem'>
