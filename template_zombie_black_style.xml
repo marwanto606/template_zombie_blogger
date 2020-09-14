@@ -83,7 +83,7 @@ a:select {
  text-decoration:none;
  }
 a:visited {
- color:#000;
+ color:#0dbdeb;
  text-decoration:none;
  }
 a:hover { 
