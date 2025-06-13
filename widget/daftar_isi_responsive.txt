@@ -61,4 +61,4 @@ var tabbedTOC = {
     newText: " - <em style='color:red;'>New!</em>" // HTML for the "New!" text
 };
 </script>
-<script src="https://cdn.staticaly.com/gist/marwanto606/fdbfa3ad2b0deec7606bc90e822649dc/raw/08bb7fe54325975237ecf44ef472e59476c9befb/tabbed-toc.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/marwanto606/template_zombie_blogger@master/tabbed-toc.js"></script>
