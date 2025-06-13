@@ -4,5 +4,5 @@ Copykan script di bawah ini dan masukkan kedalam wiget HTML atau bisa juga denga
 ganti url blog www.marwanto606.com dengan blog utama kalian
 
 <div style="overflow: auto; width: 100%;">
-<script src="https://cdn.staticaly.com/gist/marwanto606/483b4aa1a417cd735199bdeba11fee55/raw/f2f5c7db6f9003326aa6ce6b6210c95545ef1c2d/daftarisi.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/marwanto606/template_zombie_blogger@master/daftarisi.js"></script>
 <script src="https://www.marwanto606.com/feeds/posts/default?max-results=9999&amp;alt=json-in-script&amp;callback=loadtoc"></script> </div>
