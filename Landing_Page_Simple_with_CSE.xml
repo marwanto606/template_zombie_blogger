@@ -11,8 +11,7 @@
 <meta content='blogger' name='generator'/> 
 <meta content='true' name='MSSmartTagsPreventParsing'/>
 <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
-<link expr:href='data:blog.homepageUrl' rel='openid.delegate'/>
-<link expr:href='data:blog.url' rel='canonical'/>
+<data:blog.feedLinks/>
 <meta content='#0dbdeb' name='theme-color'/>
 <!-- SEO Title Tag -->
 <b:if cond='data:view.isSingleItem'>
