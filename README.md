@@ -17,6 +17,6 @@ Baca post : http://www.marwanto606.com/2020/01/template-simple-landing-page-blog
   <li>ganti url https://www.marwanto606.com dengan blog kalian</li>
   <li>Untuk pengaturan lainnya yaitu: matikan teplate versi mobile karena template ini sudah responsive</li>
   <li>Seting jumlah post yang tampil menjadi 1 di menu tata letak > Posting blog > edit</li>
-  <li>jika mengunakan template CSE kalian bisa coba buat CSE google disini https://cse.google.com/cse/?hl=id</li>
+  <li>jika mengunakan template CSE kalian bisa coba buat CSE google di https://programmablesearchengine.google.com/</li>
   <li>Selesai.</li>
   </ul>
