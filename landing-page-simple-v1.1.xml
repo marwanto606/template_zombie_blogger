@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
-<HTML>
-&lt;!--<head>--&gt;&lt;head&gt;
+<html b:css='false' b:defaultwidgetversion='2' b:js='false' b:layoutsVersion='3' b:render='true' b:responsive='true' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'><b:attr name='xmlns' value=''/><b:attr name='xmlns:b' value=''/><b:attr name='xmlns:expr' value=''/><b:attr name='xmlns:data' value=''/>
+&lt;head&gt;
 <b:if cond='data:blog.pageType == &quot;error_page&quot;'>
 <script>window.location.href = &quot;/&quot;;</script>
 </b:if>
@@ -22,6 +22,8 @@
 <b:elseif cond='data:view.isError'/>
 <title>404 Not Found</title>
 </b:if>
+<link expr:href='data:view.url.canonical' rel='canonical'/>
+<data:blog.feedLinks/>
 <meta content='width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0' name='viewport'/>
 &lt;style&gt;&lt;!-- /*<b:skin><![CDATA[*/]]></b:skin>
 <style>
@@ -181,10 +183,8 @@ img {max-width:100%;height:auto;border:0;}
 ::-webkit-scrollbar{width:10px;background:#FFF}
 ::-webkit-scrollbar-thumb{background-color:#01B8C0;border-radius:10px} 
 </style>
-&lt;!--</head>--&gt;
 &lt;/head&gt;
-&lt;!--<body>--&gt;&lt;body oncontextmenu=&#39;return false;&#39; ondragstart=&#39;return false&#39; onmousedown=&#39;return false;&#39; onselectstart=&#39;return false&#39; style=&#39;-moz-user-select: none; cursor: default;&#39;&gt;
-
+&lt;body&gt;
   <div id='outer-wrapper'>
 
     <div id='header-wrapper'>
@@ -1057,5 +1057,6 @@ img {max-width:100%;height:auto;border:0;}
 var _0x8555=["\x63\x72\x65\x64\x69\x74","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x68\x72\x65\x66","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x6D\x61\x72\x77\x61\x6E\x74\x6F\x36\x30\x36\x2E\x63\x6F\x6D","\x67\x65\x74\x41\x74\x74\x72\x69\x62\x75\x74\x65"];var element=document[_0x8555[1]](_0x8555[0]);if(element== null){window[_0x8555[3]][_0x8555[2]]= _0x8555[4]}else {if(element[_0x8555[5]](_0x8555[2])!= _0x8555[4]){window[_0x8555[3]][_0x8555[2]]= _0x8555[4]}}
 // ]]>
     </script>
-&lt;!--</body>--&gt;&lt;/body&gt;
-</HTML>
+&lt;/body&gt;
+&lt;style&gt;/*<head/><body/>*/&lt;/style&gt;
+</html>
